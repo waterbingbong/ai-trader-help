@@ -1,0 +1,1 @@
+web: gunicorn dashboard.app_with_auth:server
