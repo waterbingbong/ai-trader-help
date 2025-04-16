@@ -1,0 +1,246 @@
+/* Google Drive Integration Styles for AI Trading Assistant */
+
+/* Main component container */
+.dashboard-component {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* Section titles */
+.section-title {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* Integration sections */
+.integration-section {
+  border-bottom: 1px solid #ecf0f1;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.integration-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Input groups */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  color: #34495e;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.text-input {
+  background-color: #f8f9fa;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.text-input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Button groups */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Action buttons */
+.action-button {
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
+
+.action-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Status messages */
+.status-message {
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border-left: 4px solid #28a745;
+  color: #155724;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border-left: 4px solid #dc3545;
+  color: #721c24;
+}
+
+.warning-message {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  color: #856404;
+}
+
+/* Backup list */
+.backup-list-section {
+  margin-top: 20px;
+}
+
+.subsection-title {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.list-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.backup-item {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+}
+
+.backup-info {
+  flex: 1;
+}
+
+.backup-name {
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+
+.backup-date {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.restore-button {
+  background-color: #27ae60;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease;
+}
+
+.restore-button:hover {
+  background-color: #219653;
+}
+
+/* User profile styles */
+.user-profile-container {
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.user-header {
+  align-items: center;
+  display: flex;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.license-type {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.google-drive-status {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.success-text {
+  color: #28a745;
+}
+
+.warning-text {
+  color: #ffc107;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .backup-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .restore-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

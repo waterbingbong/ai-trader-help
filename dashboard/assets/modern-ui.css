@@ -1,0 +1,272 @@
+/* Modern UI Enhancements for AI Trading Assistant Dashboard */
+/* Adds rounded corners, smooth transitions, and a polished look */
+
+:root {
+  /* Enhanced color palette */
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --background-color: #f5f7fa;
+  --card-bg-color: #ffffff;
+  --text-color: #333333;
+  --light-text: #ffffff;
+  --border-color: #dcdfe6;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  
+  /* Shadows and effects */
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --button-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-speed: 0.3s;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Border radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 18px;
+}
+
+/* Apply rounded corners to all cards and containers */
+.card,
+.dashboard-card,
+.header-container,
+.controls-container,
+.chart-container,
+.data-container,
+.integration-section,
+.api-key-form,
+.api-status-container,
+.trading-context-form,
+.notification-container,
+.dropdown .Select-control,
+input,
+button,
+.tab,
+.tab-content {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: all var(--transition-speed) var(--transition-function);
+}
+
+/* Enhanced card styling */
+.card,
+.dashboard-card,
+.integration-section {
+  background-color: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+  border: none;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover,
+.dashboard-card:hover,
+.integration-section:hover {
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-2px);
+}
+
+/* Button styling */
+button,
+.button,
+.save-button,
+.test-button,
+.update-button {
+  border-radius: var(--border-radius-sm);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-speed) var(--transition-function);
+  box-shadow: var(--button-shadow);
+}
+
+button:hover,
+.button:hover,
+.save-button:hover,
+.test-button:hover,
+.update-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary button */
+.save-button,
+.update-button {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+}
+
+/* Secondary button */
+.test-button {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+/* Input styling */
+input,
+.api-key-input,
+.Select-control {
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  transition: border-color var(--transition-speed) var(--transition-function);
+}
+
+input:focus,
+.api-key-input:focus,
+.Select-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Status messages */
+.success-message,
+.error-message,
+.warning-message {
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  margin-top: 0.5rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-message {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--success-color);
+  border-left: 4px solid var(--success-color);
+}
+
+.error-message {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+  border-left: 4px solid var(--danger-color);
+}
+
+.warning-message {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: var(--warning-color);
+  border-left: 4px solid var(--warning-color);
+}
+
+/* Section headers */
+.section-title,
+.integration-title {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.section-description,
+.integration-description {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* API Integration Hub specific styles */
+.api-integration-hub {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.api-key-form,
+.trading-context-form {
+  background-color: rgba(52, 152, 219, 0.05);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* Risk management connection */
+.trading-context-form {
+  background-color: rgba(46, 204, 113, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dropdown styling */
+.Select-control {
+  border-radius: var(--border-radius-sm);
+}
+
+.Select-menu-outer {
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+  box-shadow: var(--card-shadow);
+  border: none;
+  margin-top: 4px;
+}
+
+/* Chart container enhancements */
+.chart-container {
+  padding: 1rem;
+  background-color: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 1.5rem;
+}
+
+/* Tab styling */
+.tab {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+  border: none;
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all var(--transition-speed) var(--transition-function);
+}
+
+.tab--selected {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+}
+
+.tab-content {
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  padding: 1.5rem;
+  background-color: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card,
+  .dashboard-card,
+  .integration-section {
+    padding: 1rem;
+  }
+  
+  .section-title,
+  .integration-title {
+    font-size: 1.25rem;
+  }
+  
+  button,
+  .button,
+  .save-button,
+  .test-button,
+  .update-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
