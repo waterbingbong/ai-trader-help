@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "dashboard/vercel_adapter.py",
+      "src": "vercel_wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/dashboard/vercel_adapter.py"
+      "dest": "/vercel_wsgi.py"
     }
   ],
   "env": {
