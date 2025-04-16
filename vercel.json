@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "vercel_wsgi.py",
+      "src": "dashboard/app_with_auth.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/vercel_wsgi.py"
+      "dest": "/dashboard/app_with_auth.py"
     }
   ],
   "env": {
